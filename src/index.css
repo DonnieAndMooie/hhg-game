@@ -1,0 +1,324 @@
+@font-face {
+    font-family: "Bebas";
+    src: url("./fonts/Bebas_Neue/BebasNeue-Regular.ttf")
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #2a7ffd;
+}
+
+header{
+    background-color: #02a9e1;
+    font-size: 48px;
+    color: white;
+    font-family: "Bebas", sans-serif;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 0;
+    gap: 32px;
+    height: 180px;
+}
+
+header p{
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+}
+
+header p img{
+    height: 32px;
+    cursor: pointer;
+}
+
+header p img:hover{
+    opacity: 0.3;
+}
+
+.flag{
+    height: 180px;
+}
+
+.fixture{
+    background-color: white;
+    margin: 18px;
+    padding: 12px;
+    border-radius: 12px;
+    font-family: sans-serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    height: 12vh;
+}
+
+.fixture-details{
+    margin-top: 18px;
+}
+
+.answer{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.answer *{
+    width: 300px;
+    font-size: 18px;
+}
+
+.suggestion{
+    font-size: 16px;
+    padding: 8px;
+    margin: 0;
+}
+
+.suggestion:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.suggestions{
+    max-height: 400px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    position: absolute;
+    background-color: white;
+    margin-top: 20px;
+}
+
+.submit{
+    background-color: green;
+    font-size: 18px;
+    color: white;
+    padding: 12px;
+    margin-bottom: 8px;
+    border: none;
+    transition: all 0.2s
+}
+
+.submit:hover{
+    background-color: rgb(0, 255, 0);
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loading{
+    color: white;
+    font-size: 128px;
+    margin-top: 180px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Bebas", sans-serif;
+}
+
+.fixture img{
+    height: 40px;
+    width: 40px;
+}
+
+.answer-marked{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.error{
+    color: red;
+    font-size: 32px;
+    font-family: sans-serif;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 8px;
+    border-radius: 4px;
+}
+
+.score{
+    font-size: 32px;
+    color: white;
+    font-family: "Bebas", sans-serif;
+    margin-top: 18px;
+    background-color: green;
+    padding: 10px 32px;
+}
+
+.help-icon{
+    height: 48px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.help-icon:hover{
+    cursor: pointer;
+    opacity: 0.3;
+}
+
+.help{
+    background-color: #02a9e1;
+    margin: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    color: white;
+    box-shadow: -5px -8px 34px 10px blue;
+    padding: 12px 128px;
+}
+
+.help h1{
+    font-family: "Bebas", sans-serif;
+    font-size: 63px;
+}
+
+.help p {
+    font-size: 24px;
+    margin-top: 8px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.space{
+    height: 24px;
+}
+
+.timer{
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    font-family: "Bebas", sans-serif;
+    background-color: blue;
+    padding: 12px 32px;
+    margin-top: 12px;
+    border-radius: 6px;
+}
+
+.time-up{
+    font-family: "Bebas", sans-serif;
+    color: white;
+    font-size: 32px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.close-icon{
+    height: 40px;
+    position: relative;
+    top: 10px;
+    left: 55%;
+    cursor: pointer;
+}
+
+.close-icon:hover{
+    opacity: 80%;
+}
+
+
+
+@media  (max-width: 1200px) {
+    .fixture img{
+        height: 20px;
+        width: 20px;
+    }
+    h1{
+        font-size: 80px;
+    }
+
+}
+
+@media  (max-width: 950px) {
+    h1{
+        font-size: 60px;
+    }
+    header{
+        gap: 8px;
+    }
+
+    .suggestions{
+        max-height: 30vh;
+    }
+}
+
+
+@media (max-width: 800px) {
+    .flag{
+        height: 100%;
+    }
+
+    header{
+        padding: 0;
+    }
+
+    .help-icon{
+        height: 40px;
+    }
+
+    h1{
+        font-size: 50px;
+    }
+
+    .fixture{
+        height: 12vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .fixture{
+        font-size: 14px;
+    }
+
+    .answer{
+        width: 50%;
+    }
+
+    .answer *{
+        width: 100%;
+    }
+
+
+    h1{
+        font-size: 32px;
+    }
+
+    .flag{
+        height: 64px;
+    }
+
+    header em{
+        font-size: 24px;
+    }
+
+    header p img,
+    .help-icon{
+        height: 20px;
+    }
+}
+
+
+@media (max-height: 500px) {
+    .fixture{
+        height: 30vh;
+    }
+}
