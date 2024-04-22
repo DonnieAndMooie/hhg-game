@@ -34,7 +34,6 @@ export default function Game({fixtures, prevGuesses}) {
       document.getElementById("season5").value = prevGuesses.level5Season
     
 
-      
 
       checkAnswers()
     }
@@ -48,7 +47,7 @@ export default function Game({fixtures, prevGuesses}) {
     const level4Guess = document.getElementById("player4").value
     const level5Guess = document.getElementById("player5").value
 
-    if ((level1Guess === "" || level2Guess === "" || level3Guess === "" || level4Guess === "" || level5Guess === "") && timeUp === false){
+    if ((level1Guess === "" || level2Guess === "" || level3Guess === "" || level4Guess === "" || level5Guess === "") && timeUp === false && !prevGuesses){
       setError(true)
       return
     }
