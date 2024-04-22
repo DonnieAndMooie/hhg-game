@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/hhg-game/static/css/main.e12ce0b9.css",
-    "main.js": "/hhg-game/static/js/main.651e429b.js",
+    "main.js": "/hhg-game/static/js/main.31ab0421.js",
     "static/media/flag.jpeg": "/hhg-game/static/media/flag.11a52d42897f438bd47e.jpeg",
     "static/media/BebasNeue-Regular.ttf": "/hhg-game/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "static/media/cross.png": "/hhg-game/static/media/cross.ffdafe3f0eceab67b7c2.png",
     "index.html": "/hhg-game/index.html",
     "main.e12ce0b9.css.map": "/hhg-game/static/css/main.e12ce0b9.css.map",
-    "main.651e429b.js.map": "/hhg-game/static/js/main.651e429b.js.map"
+    "main.31ab0421.js.map": "/hhg-game/static/js/main.31ab0421.js.map"
   },
   "entrypoints": [
     "static/css/main.e12ce0b9.css",
-    "static/js/main.651e429b.js"
+    "static/js/main.31ab0421.js"
   ]
 }
