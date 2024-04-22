@@ -29,6 +29,10 @@ function App() {
       if (savedDate.toDateString() === new Date().toDateString()){
         setPrevGuesses(JSON.parse(guesses))
       }
+      else{
+        localStorage.removeItem("guesses")
+        setPrevGuesses(null)
+      }
     }
   }, [])
 
