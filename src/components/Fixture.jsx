@@ -1,11 +1,17 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import players from '../players'
 import Cross from "../images/cross.png"
 import Tick from "../images/tick.png"
 
-export default function Fixture({fixture, level, score}) {
+export default function Fixture({fixture, level, score, prevGuess, prevSeason}) {
     const [input, setInput] = useState("")
     const [suggestions, setSuggestions] = useState([])
+
+    useEffect(() => {
+        if (prevGuess){
+            setInput(prevGuess)
+        }
+    }, [])
 
     const seasons = []
     for(let i=2023; i > 1992; i--){
@@ -61,7 +67,7 @@ export default function Fixture({fixture, level, score}) {
     }
 
     if(score !== null){
-        const season = document.getElementById(`season${level}`).value
+        const season = prevSeason || document.getElementById(`season${level}`).value
         return(
             <div className="fixture">
                 <div className="question">

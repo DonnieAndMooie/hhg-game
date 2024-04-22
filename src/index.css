@@ -314,6 +314,15 @@ header p img:hover{
     .help-icon{
         height: 20px;
     }
+
+    .help{
+        padding: 0 10px 10px;
+        font-size: 18px;
+    }
+
+    .close-icon{
+        left: 44%;
+    }
 }
 
 

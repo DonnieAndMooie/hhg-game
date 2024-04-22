@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Fixture from './Fixture'
 import Timer from './Timer'
 
-export default function Game({fixtures}) {
+export default function Game({fixtures, prevGuesses}) {
   const [score, setScore] = useState(null)
   const [levelOneScore, setLevelOneScore] = useState(null)
   const [levelTwoScore, setLevelTwoScore] = useState(null)
@@ -17,6 +17,28 @@ export default function Game({fixtures}) {
       checkAnswers()
     }
   }, [timeUp])
+
+  useEffect(() => {
+    console.log(prevGuesses)
+    if (prevGuesses){
+      document.getElementById("player1").value = prevGuesses.level1Guess
+      document.getElementById("player2").value = prevGuesses.level2Guess
+      document.getElementById("player3").value = prevGuesses.level3Guess
+      document.getElementById("player4").value = prevGuesses.level4Guess
+      document.getElementById("player5").value = prevGuesses.level5Guess
+    
+      document.getElementById("season1").value = prevGuesses.level1Season
+      document.getElementById("season2").value = prevGuesses.level2Season
+      document.getElementById("season3").value = prevGuesses.level3Season
+      document.getElementById("season4").value = prevGuesses.level4Season
+      document.getElementById("season5").value = prevGuesses.level5Season
+    
+
+      
+
+      checkAnswers()
+    }
+  }, [])
 
   function checkAnswers(){
 
@@ -38,6 +60,22 @@ export default function Game({fixtures}) {
     checkAnswer(5, setLevelFiveScore, fixtures.levelFive.answers)
     setError(false)
     setScore(levelOneScore + levelTwoScore + levelThreeScore + levelFourScore + levelFiveScore)
+
+    localStorage.setItem("guesses", JSON.stringify({
+      level1Guess: level1Guess,
+      level2Guess: level2Guess,
+      level3Guess: level3Guess,
+      level4Guess: level4Guess,
+      level5Guess: level5Guess,
+      level1Season: document.getElementById("season1").value,
+      level2Season: document.getElementById("season2").value,
+      level3Season: document.getElementById("season3").value,
+      level4Season: document.getElementById("season4").value,
+      level5Season: document.getElementById("season5").value,
+      timestamp: fixtures.timestamp
+    }))
+
+
 }
 
   function checkAnswer(level, setScore, answers){
@@ -62,11 +100,11 @@ export default function Game({fixtures}) {
       
       {score !== null ? <div className='score'>You scored {levelOneScore + levelTwoScore + levelThreeScore + levelFourScore + levelFiveScore}/30</div> : ""}
       {error ? <p className='error'>Please answer all questions</p> : ""}
-        <Fixture fixture={fixtures.levelOne} level={1} score={levelOneScore}/>
-        <Fixture fixture={fixtures.levelTwo} level={2} score={levelTwoScore}/>
-        <Fixture fixture={fixtures.levelThree} level={3} score={levelThreeScore}/>
-        <Fixture fixture={fixtures.levelFour} level={4} score={levelFourScore}/>
-        <Fixture fixture={fixtures.levelFive} level={5} score={levelFiveScore}/>
+        <Fixture fixture={fixtures.levelOne} level={1} score={levelOneScore} prevGuess={prevGuesses ? prevGuesses.level1Guess : null} prevSeason={prevGuesses ? prevGuesses.level1Season : null}/>
+        <Fixture fixture={fixtures.levelTwo} level={2} score={levelTwoScore} prevGuess={prevGuesses ? prevGuesses.level2Guess : null} prevSeason={prevGuesses ? prevGuesses.level2Season : null}/>
+        <Fixture fixture={fixtures.levelThree} level={3} score={levelThreeScore} prevGuess={prevGuesses ? prevGuesses.level3Guess : null} prevSeason={prevGuesses ? prevGuesses.level3Season : null}/>
+        <Fixture fixture={fixtures.levelFour} level={4} score={levelFourScore} prevGuess={prevGuesses ? prevGuesses.level4Guess : null} prevSeason={prevGuesses ? prevGuesses.level4Season : null}/>
+        <Fixture fixture={fixtures.levelFive} level={5} score={levelFiveScore} prevGuess={prevGuesses ? prevGuesses.level5Guess : null} prevSeason={prevGuesses ? prevGuesses.level5Season : null}/>
         {score !== null ? "" : <button onClick={() => checkAnswers()} className="submit">Submit Answers</button>}
         
         

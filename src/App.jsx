@@ -6,6 +6,7 @@ import Help from "./components/Help";
 function App() {
   const [fixtures, setFixtures] = useState(null)
   const [help, setHelp] = useState(false)
+  const [prevGuesses, setPrevGuesses] = useState(null)
 
   useEffect(() => {
     async function fetchFixtures(){
@@ -14,6 +15,21 @@ function App() {
       setFixtures(data)
     }
     fetchFixtures()
+  }, [])
+
+  useEffect(() => {
+    const visited = localStorage.getItem("visited")
+    if (visited === null){
+      setHelp(true)
+      localStorage.setItem("visited", true)
+    }
+    const guesses = localStorage.getItem("guesses")
+    if (guesses){
+      const savedDate = new Date(JSON.parse(guesses).timestamp)
+      if (savedDate.toDateString() === new Date().toDateString()){
+        setPrevGuesses(JSON.parse(guesses))
+      }
+    }
   }, [])
 
   if (!fixtures){
@@ -38,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <Header setHelp={setHelp} help={help}/>
-      <Game fixtures={fixtures}/>
+      <Game fixtures={fixtures} prevGuesses={prevGuesses}/>
     </div>
   );
 }
