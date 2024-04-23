@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/hhg-game/static/css/main.3ae292b7.css",
-    "main.js": "/hhg-game/static/js/main.e426ad5e.js",
+    "main.css": "/hhg-game/static/css/main.dd9601ac.css",
+    "main.js": "/hhg-game/static/js/main.4c2d710f.js",
     "static/media/flag.jpeg": "/hhg-game/static/media/flag.11a52d42897f438bd47e.jpeg",
     "static/media/BebasNeue-Regular.ttf": "/hhg-game/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "static/media/cross.png": "/hhg-game/static/media/cross.ffdafe3f0eceab67b7c2.png",
     "index.html": "/hhg-game/index.html",
-    "main.3ae292b7.css.map": "/hhg-game/static/css/main.3ae292b7.css.map",
-    "main.e426ad5e.js.map": "/hhg-game/static/js/main.e426ad5e.js.map"
+    "main.dd9601ac.css.map": "/hhg-game/static/css/main.dd9601ac.css.map",
+    "main.4c2d710f.js.map": "/hhg-game/static/js/main.4c2d710f.js.map"
   },
   "entrypoints": [
-    "static/css/main.3ae292b7.css",
-    "static/js/main.e426ad5e.js"
+    "static/css/main.dd9601ac.css",
+    "static/js/main.4c2d710f.js"
   ]
 }
