@@ -252,6 +252,13 @@ header p img:hover{
     color: white;
 }
 
+.countdown{
+    color: white;
+    font-family: sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+}
 
 
 

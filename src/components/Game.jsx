@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Fixture from './Fixture'
 import Timer from './Timer'
 import TweetButton from './TweetButton'
+import Countdown from './Countdown'
 
 export default function Game({fixtures, prevGuesses}) {
   const [score, setScore] = useState(null)
@@ -100,6 +101,7 @@ export default function Game({fixtures, prevGuesses}) {
       
       {score !== null ? <div className='score'>You scored {levelOneScore + levelTwoScore + levelThreeScore + levelFourScore + levelFiveScore}/30</div> : ""}
       {score !== null ? <TweetButton score={levelOneScore + levelTwoScore + levelThreeScore + levelFourScore + levelFiveScore} levelOneScore={levelOneScore} levelTwoScore={levelTwoScore} levelThreeScore={levelThreeScore} levelFourScore={levelFourScore} levelFiveScore={levelFiveScore}/> : ""}
+      {score !== null ? <Countdown /> : ""}
       {error ? <p className='error'>Please answer all questions</p> : ""}
         <Fixture fixture={fixtures.levelOne} level={1} score={levelOneScore} prevGuess={prevGuesses ? prevGuesses.level1Guess : null} prevSeason={prevGuesses ? prevGuesses.level1Season : null}/>
         <Fixture fixture={fixtures.levelTwo} level={2} score={levelTwoScore} prevGuess={prevGuesses ? prevGuesses.level2Guess : null} prevSeason={prevGuesses ? prevGuesses.level2Season : null}/>

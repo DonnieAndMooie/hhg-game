@@ -62,7 +62,7 @@ export default function TweetButton({score, levelOneScore, levelTwoScore, levelT
         url="https://donnieandmooie.github.io/hhg-game/"
         options={{
             size: 'large',
-            text:`Happy Hunting Grounds \n ${new Date().toDateString()} \n ${score}/30 \n${grid}`,
+            text:`Happy Hunting Grounds \n${new Date().toDateString()} \n${score}/30 \n${grid}`,
   }}/>
 
     </div>
