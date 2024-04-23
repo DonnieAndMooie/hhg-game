@@ -34,7 +34,7 @@ function App() {
         setPrevGuesses(null)
       }
     }
-  }, [])
+  }, [help])
 
   if (!fixtures){
     return(
