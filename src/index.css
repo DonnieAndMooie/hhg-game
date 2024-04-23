@@ -235,6 +235,24 @@ header p img:hover{
     opacity: 80%;
 }
 
+.share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    background-color: rgb(60, 60, 60);
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+
+.share p{
+    font-size: 28px;
+    font-family: "Bebas", sans-serif;
+    color: white;
+}
+
+
 
 
 @media  (max-width: 1200px) {
