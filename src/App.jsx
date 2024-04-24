@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     async function fetchFixtures(){
-      const response = await fetch("https://calm-jade-cygnet-wear.cyclic.app/daily-fixtures")
+      const response = await fetch(process.env.REACT_APP_API)
       const data = await response.json()
       setFixtures(data)
     }

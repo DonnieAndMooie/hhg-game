@@ -244,6 +244,7 @@ header p img:hover{
     background-color: rgb(60, 60, 60);
     padding: 12px 24px;
     border-radius: 8px;
+    height: 100px;
 }
 
 .share p{
@@ -258,6 +259,7 @@ header p img:hover{
     font-size: 22px;
     font-weight: bold;
     margin-top: 10px;
+    height: 22px;
 }
 
 
@@ -348,11 +350,20 @@ header p img:hover{
     .close-icon{
         left: 44%;
     }
+
+
 }
 
 
 @media (max-height: 500px) {
     .fixture{
         height: 30vh;
+    }
+
+}
+
+@media (max-width: 400px) {
+    .player-guess, .season-guess{
+        font-size: 14px;
     }
 }

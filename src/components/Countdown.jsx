@@ -32,7 +32,9 @@ export default function Countdown() {
   }, [])
 
   if (!seconds && !minutes && !hours){
-    return
+    return(
+      <div className="countdown"></div>
+    )
   }
 
   return (
