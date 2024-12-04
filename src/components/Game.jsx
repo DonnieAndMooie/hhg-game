@@ -21,7 +21,6 @@ export default function Game({fixtures, prevGuesses}) {
   }, [timeUp])
 
   useEffect(() => {
-    console.log(prevGuesses)
     if (prevGuesses){
       document.getElementById("player1").value = prevGuesses.level1Guess
       document.getElementById("player2").value = prevGuesses.level2Guess
