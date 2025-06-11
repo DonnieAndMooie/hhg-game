@@ -4879,7 +4879,7 @@ const players = [
 "Diego Gomez",
 "Antonin Kinsky",
 "Andres Garcia",
-"Ricardo Calafiori",
+"Riccardo Calafiori",
 "Nasser Djiga",
 "Nathan Butler-Oyedeji",
 "Ali Al-Hamadi",
