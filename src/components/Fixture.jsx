@@ -14,7 +14,7 @@ export default function Fixture({fixture, level, score, prevGuess, prevSeason}) 
     }, [])
 
     const seasons = []
-    for(let i=2025; i >= 1992; i--){
+    for(let i=2024; i >= 1992; i--){
         let twoDigits = Number(i.toString().slice(-2))
         if (twoDigits === 99){
             twoDigits = "00"
